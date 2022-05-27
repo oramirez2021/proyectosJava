@@ -19,7 +19,7 @@ public class DemoApplication {
 			System.out.println("Not so cool");
 		}
 	}*/
-	public static void main(String[] args) {
+	/*public static void main(String[] args) {
 		//Collection coleccion = new ArrayList();
 		Collection<Integer> coleccion = new ArrayList();
 		coleccion.add(1);
@@ -31,6 +31,20 @@ public class DemoApplication {
 		for (Object i: coleccion){
 			System.out.println(i);
 		}
+	}*/
+	// main method singleton example
+	public static void main(String[] args){
+		Abc a =  Abc.getInstance();
+		Abc b = Abc.getInstance();
 	}
+	//main method singleton example
 
+}
+class Abc{
+	static Abc abc = new Abc();
+	private Abc(){
+	}
+	static Abc getInstance(){
+		return abc;
+	}
 }
