@@ -9,7 +9,7 @@ public class Test {
         System.out.println("test class message showing using "+message);
     }
     public static int calculate(int x, int y){
-        return x+y;
+        return x-y;
     }
     public int add(int x, int y){
             return x+y;
