@@ -28,15 +28,23 @@ class StudentServiceTest {
 
     @Test
     void canAddStudent() {
-        //given
-        Student student = new Student("Jamila","jamila@gmail.com",Gender.FEMALE);
+      //given
+        Student student = new Student("jamila","jamila1@gmail.com",Gender.FEMALE);
         //when
         underTest.addStudent(student);
         //then
-        ArgumentCaptor<Student> studentArgumentCaptor = ArgumentCaptor.forClass(Student.class);
+        ArgumentCaptor<Student>  studentArgumentCaptor = ArgumentCaptor.forClass(Student.class);
         verify(studentRepository).save(studentArgumentCaptor.capture());
-        Student captureStudent = studentArgumentCaptor.getValue();
-        Assertions.assertEquals(student,captureStudent);
+        Student studentCaptured = studentArgumentCaptor.getValue();
+        Assertions.assertEquals(student,studentCaptured);
+
+    }
+    @Test
+    void willThrowWhenEmailIsTaken() {
+        //given
+        Student student = new Student("jamila","jamila1@gmail.com",Gender.FEMALE);
+        //when//then 
+
     }
 
     @Test
