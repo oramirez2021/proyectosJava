@@ -1,8 +1,7 @@
 package com.example.demo;
 
-import java.util.HashMap;
-import java.util.Iterator;
-import java.util.Map;
+import java.util.*;
+import java.util.Map.*;
 
 public class HashmapProjectApplication2 {
     /*public static void main(String[] args){
@@ -39,7 +38,7 @@ public class HashmapProjectApplication2 {
             }
         }
     }*/
-    public static void main(String[] args){
+    /*public static void main(String[] args){
         HashMap<Integer,String> valores = new HashMap<>();
         Iterator<Integer> i = valores.keySet().iterator();
         int ii = 0;
@@ -58,6 +57,58 @@ public class HashmapProjectApplication2 {
             if(ii == 100){
                 break;
             }
+        }
+    }*/
+    /*how to read add elements from HashMap. The method keySet() returns all key
+    entries as a set object. Iterating through each key, we can get corresponding value object.*/
+    /*public static void main(String[] args){
+        HashMap<String,String> valores = new HashMap<>();
+        valores.put("uno","omar");
+        valores.put("dos","renzo");
+        valores.put("tres","sergio");
+        valores.put("cuatro","michelle");
+        valores.put("cinco","mama");
+        valores.put("seis","papa");
+        Set<String> indices = valores.keySet();
+        for(String x:indices){
+            System.out.println(valores.get(x));
+        }
+    }*/
+    /*
+    how to copy another collection to HashMap. putAll() method helps us to copy
+    another collections to HashMap object. If index are diferent putall add not replace.
+    */
+     /*public static void main(String[] args){
+         HashMap<Integer,String> x = new HashMap<>();
+         HashMap<Integer,String> y = new HashMap<>();
+         x.put(1,"omar");
+         x.put(2,"renzo");
+         x.put(3,"sergio");
+         x.put(4,"michelle");
+         x.put(5,"papa");
+         x.put(6,"mama");
+         y.put(7,"camila");
+         y.put(8,"dani");
+         y.putAll(x);
+         System.out.println(x);
+         System.out.println(y);
+     }*/
+    /*
+    how to get all key-value pair as Entry objects. Entry class provides getter methods
+    to access key-value details. The method entrySet() provides all entries as set object.
+     */
+    public static void main(String[] args) {
+        HashMap<Integer, String> x = new HashMap<>();
+        x.put(1,"omar");
+        x.put(2,"renzo");
+        x.put(3,"sergio");
+        x.put(4,"michelle");
+        x.put(5,"papa");
+        x.put(6,"mama");
+        System.out.println(x);
+        Set<Entry<Integer,String>> seteado =  x.entrySet();
+        for (Entry<Integer,String> y : seteado) {
+            System.out.println(y.getValue());
         }
     }
 }
