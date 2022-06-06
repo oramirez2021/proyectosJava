@@ -15,7 +15,7 @@ public class HashmapProjectApplication2 {
             System.out.println(entero);
         }
     }*/
-    public static void main(String[] args){
+    /*public static void main(String[] args){
         HashMap<Integer,String> numbers =  new HashMap<>();
         numbers.put(1,"omar");
         numbers.put(2,"omar");
@@ -38,6 +38,26 @@ public class HashmapProjectApplication2 {
                 System.out.println(ii.next());
             }
         }
+    }*/
+    public static void main(String[] args){
+        HashMap<Integer,String> valores = new HashMap<>();
+        Iterator<Integer> i = valores.keySet().iterator();
+        int ii = 0;
+        while (!i.hasNext()){
+            valores.put(ii,"omar");
+            System.out.println("hola");
+            if(ii == 100){
+                break;
+            }
+            ii++;
+        }
+        while (i.hasNext()){
+            valores.put(ii,"omar");
+            System.out.println("hola");
+            ii++;
+            if(ii == 100){
+                break;
+            }
+        }
     }
-
 }
