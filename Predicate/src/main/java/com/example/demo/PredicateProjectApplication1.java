@@ -16,15 +16,19 @@ public class PredicateProjectApplication1 {
         names.add("michelle");
         names.add("ivonne");
         names.add("papa");
-        Predicate<Integer> p1 = x -> x % 2 ==0 && x > 10;
-        Predicate<String> p2 = y -> y.startsWith("p") && !y.endsWith("p");
+        //Predicate<Integer> p1 = x -> x % 2 ==0 && x > 10;
+        //Predicate<String> p2 = y -> y.startsWith("p") && !y.endsWith("p");
+        Predicate<Integer> p1 =  x -> x % 2 == 0;
+        Predicate<Integer> p2 =  x -> x > 10;
+        Predicate<String> p3 =  y -> y.startsWith("p");
+        Predicate<String> p4 =  y -> !y.endsWith("p");
         for (int i: numbers) {
-            if(p1.test(i)) {
+            if(p1.and(p2).test(i)) {
                 System.out.println(i);
             }
         }
         for (String ii: names) {
-            if(p2.test(ii)) {
+            if(p3.and(p4).test(ii)) {
                 System.out.println(ii);
             }
         }
