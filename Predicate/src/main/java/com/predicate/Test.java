@@ -1,8 +1,30 @@
 package com.predicate;
 
+import java.util.ArrayList;
+import java.util.List;
 import java.util.function.Predicate;
 
 public class Test {
+    /*first excercise with predicates*/
+   /* public static void main(String[] args){
+        int[] numeros = {51,85,25,2,35,65};
+        Predicate<Integer> p1 = number -> number % 2 == 0;
+        Predicate<Integer> p2 = number1 -> number1 > 2;
+        Predicate<Integer> p3 = number2 -> number2 > 50;
+        System.out.println("even numbers");
+        m1(p1,numeros);
+        System.out.println("numbers greater than 2");
+        m1(p2,numeros);
+        System.out.println("numbers greater than 50");
+        m1(p3,numeros);
+    }
+    public static void m1(Predicate<Integer> p, int[] list_numbers){
+        for (int i: list_numbers) {
+            if(p.test(i)){
+                System.out.println(i);
+            }
+        }
+    }*/
     public static void main(String[] args) {
        /* funciona
        Predicate<Integer> p=I->I>50;

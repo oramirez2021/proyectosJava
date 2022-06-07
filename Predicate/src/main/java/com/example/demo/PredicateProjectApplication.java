@@ -11,16 +11,17 @@ import java.util.stream.Collectors;
 public class PredicateProjectApplication {
 
 	public static void main(String[] args) {
-		List<Student> students= new ArrayList<>();
-		students.add(new Student("omar",43));
-		students.add(new Student("renzo",41));
-		students.add(new Student("sergio",39));
-		students.add(new Student("michelle",45));
-		students.add(new Student("joaquin",22));
-		System.out.println(students);
-		Predicate<Student> p = student -> student.getAge() >= 40;
-		List<Student>  filtered = students.stream().filter(p).collect(Collectors.toList());
-		System.out.println(filtered);
+		List<Student> lista = new ArrayList<>();
+		lista.add(new Student("omar",43));
+		lista.add(new Student("renzo",41));
+		lista.add(new Student("sergio",42));
+		lista.add(new Student("michelle",45));
+		System.out.println(lista);
+		Predicate<Student> p = item -> item.getAge() > 41;
+		List<Student> nuevaLista = lista.stream().filter(p).collect(Collectors.toList());
+		for (Student s: nuevaLista) {
+			System.out.println(s.getName() + " "+ s.getAge());
+		}
 	}
 
 }
