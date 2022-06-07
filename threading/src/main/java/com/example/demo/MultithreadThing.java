@@ -3,6 +3,7 @@ package com.example.demo;
 public class MultithreadThing extends Thread{
     int threatNumber;
     public MultithreadThing(int threatNumber) {
+
         this.threatNumber = threatNumber;
     }
 
