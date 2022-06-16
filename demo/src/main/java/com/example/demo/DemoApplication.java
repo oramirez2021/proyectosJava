@@ -34,17 +34,21 @@ public class DemoApplication {
 	}*/
 	// main method singleton example
 	public static void main(String[] args){
-		Abc a =  Abc.getInstance();
-		Abc b = Abc.getInstance();
+		Abc abc1 = Abc.getInstance();
+		abc1.getMesage("hola omar");
 	}
 	//main method singleton example
 
 }
 class Abc{
-	static Abc abc = new Abc();
 	private Abc(){
+
 	}
-	static Abc getInstance(){
+	static Abc abc = new Abc();
+	public static Abc getInstance(){
 		return abc;
+	}
+	public void getMesage(String nombre){
+		System.out.println(nombre);
 	}
 }
