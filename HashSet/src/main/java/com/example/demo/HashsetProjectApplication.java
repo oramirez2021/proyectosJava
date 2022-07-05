@@ -38,6 +38,8 @@ public class HashsetProjectApplication {
 		while (i.hasNext()){
 			System.out.println(i.next());
 		}
+		Set<String> x = new HashSet<>();
+		x.
 	}
 
 }
