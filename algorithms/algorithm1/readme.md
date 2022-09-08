@@ -8,4 +8,3 @@ Let's say that pattern matches a substring s[l..r] of s if the following 3 condi
 
 Note: In this we define the vowels as a,e,i,o,u, and y. All other letters are consonants.
 
-I am not challenging anyone here, I have tried different ways but could not achieve. This question was asked in codesignal test assessment recently.
