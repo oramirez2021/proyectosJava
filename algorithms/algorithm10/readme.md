@@ -11,9 +11,11 @@ Each line i of the q subsequent lines contains three space-separated integers de
 
 Constraints
 
-0 <= q <= 500
-0 <= a,b <= 50
-1 <= n <= 15
+0 <= q <= 500  
+
+0 <= a,b <= 50  
+
+1 <= n <= 15  
 
 Output Format
 
@@ -27,7 +29,8 @@ Sample Input
 
 Sample Output
 
-2 6 14 30 62 126 254 510 1022 2046
+2 6 14 30 62 126 254 510 1022 2046  
+
 8 14 26 50 98
 
 
