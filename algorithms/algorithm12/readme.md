@@ -1,0 +1,1 @@
+Please for taking the challenge open the challenge.png file inside this directory.
