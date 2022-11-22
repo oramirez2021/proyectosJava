@@ -3,29 +3,35 @@ package algorithm13;
 import java.util.ArrayList;
 
 public class Main {
-    public static void main(String[] args){
-        int[] numers = {2,3,6,9,45,88};
-        int x =16;
-        boolean result =  false;
-        ArrayList<Integer> eval = new ArrayList<Integer>();
-        for (int i = 0; i < numers.length; i++) {
-            if(numers[i]<x){
-                eval.add(numers[i]);
-            }
-        }
-        int a  = 0;
+    public static void main(String args[]) {
+        int numbers[] = { 1, 6, 9, 19, 45, 88 };
+        int x = 16;
+        int len = numbers.length;
+        int a = 0;
         int b = 0;
-        for (int i : eval) {
-            a = i;
-            for(int j=0;j<eval.size();j++){
-                b = eval.get(j);
-                if((a+b==x)&&(a!=b)){
-                    result = true;
-
+        boolean result = false;
+        for (int i = 0; i < len; i++) {
+            if (result == false) {
+                a = numbers[i];
+                if (a < x) {
+                    for (int j = i + 1; j < len; j++) {
+                        b = numbers[j];
+                        if (b < x) {
+                            if (a + b == x) {
+                                result = true;
+                                break;
+                            }
+                        } else {
+                            break;
+                        }
+                    }
+                } else {
+                    break;
                 }
+            } else {
+                break;
             }
         }
-
         System.out.println(result);
     }
 }
